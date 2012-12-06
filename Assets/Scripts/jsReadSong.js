@@ -96,7 +96,7 @@ function FileTest(filepath : String) {
 	
 	var readnoteinfo : NoteInfo = new NoteInfo();
 	
-	filetest = new File.OpenText(filepath);
+	filetest = new StreamReader(filepath, System.Text.Encoding.Default);
 	tempstring = filetest.ReadLine();
 	
 	if(tempstring != ":HEADER")
